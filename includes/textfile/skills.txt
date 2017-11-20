@@ -1,0 +1,6 @@
+Here are my toolbox for development. 
+I primarily use PHP on web development 
+and everything alongside with this like HTML, CSS, jQuery, 
+Bootstrap. Learning a new framework or language is not a problem, 
+in fact Python - Django is my second choice for development, 
+building small and medium Web apps, small Game Development.<br /><br />

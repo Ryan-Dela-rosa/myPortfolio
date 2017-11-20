@@ -1,0 +1,30 @@
+<li>
+<blockquote>
+<p>“I'm not a great programmer; I'm just a good programmer with great habits.”</p>
+<cite>Kent Beck</cite>
+</blockquote>
+</li> <!-- slide ends -->
+
+<li>
+<blockquote>
+<p>“ It's hard enough to find an error in your code when you're looking for it; it's even harder when you've assumed your code is error-free. ” “ It's hard enough to find an error in your code when you're looking for it; it's even harder when you've assumed your code is error-free. ” 
+</p>
+<cite>Steve McConnell</cite>
+</blockquote>
+</li> <!-- slide ends -->
+
+<li>
+<blockquote>
+<p>“It's not at all important to get it right the first time. It's vitally important to get it right the last time.”  
+</p>
+<cite>Andrew Hunt and David Thomas </cite>
+</blockquote>
+</li> <!-- slide ends -->
+
+<li>
+<blockquote>
+<p>“Empowerment of individuals is a key part of what makes open source work since in the end, innovations tend to come from small groups, not from large, structured efforts.”  
+</p>
+<cite>Tim O'Reilly</cite>
+</blockquote>
+</li>

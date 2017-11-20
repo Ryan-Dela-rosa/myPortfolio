@@ -1,0 +1,5 @@
+<p>Hi! I’m Benigno Ryan U. Dela rosa and most of my friends call me Ryan for short. I am a freelance  Back-end web developer. I have a degree in Electronics Engineering from AMA Computer College but decided to change career and become a programmer. Currently ,  i just finished my training program at the <strong>University of the Philippines Information Technology Development Center</strong> on <strong>Python and PHP language.</strong></p>
+
+<p>I’m constantly learning technologies and other web developing related topics,  Now, my toolbox in web developing is Python with django framework. All of my skills in coding are not limited to Python, infact i am skilled in some design and development tools. This includes: HTML5, CSS3, PHP, Photoshop, Bootstrap, Responsive Web Design, Jquery Plugins.</p>
+
+<p>As a newly born web developer i say that i enjoy each project as i get it and i am happy that i chose this endeavor. As you go through on my site you will learn more about myself and my currently working project. Feel free to contact me if you think i can be of service to you.</p> 
