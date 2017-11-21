@@ -39,6 +39,9 @@
 
                   <div>
                      <button class ="button" type="submit" name="submit" value="<?= $contactMessage; ?>">Submit</button>
+			<span id="image-loader">
+                        <img alt="loader" src="images/loader.gif">
+                     	</span>
                   </div>
 
       			</fieldset>
