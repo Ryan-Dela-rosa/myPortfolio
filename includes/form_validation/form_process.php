@@ -22,16 +22,26 @@ session_start();
                 $number_valid  = preg_match("/^(\d[\s-]?)?[\(\[\s-]{0,2}?\d{3}[\)\]\s-]{0,2}?\d{3}[\s-]?\d{4}$/i",$_POST["number"]);
                 $message_valid = (strlen($_POST["message"]) < 500);
 
-                $sqlinsert     = "INSERT INTO myclients (name, email, number, message) VALUES ('$name', '$email', '$number', '$message')";
+                if ($name_valid && $email_valid && $number_valid && $message_valid){
+                    $sqlinsert  = "INSERT INTO myclients (name, email, number, message) VALUES (?,?,?,?)";
 
-                if ($connect->query($sqlinsert)) {
-                header("Location: thankyou.php");
-                }
+                    if ($stmt = mysqli_prepare($connect, $sqlinsert)) {
+                    mysqli_stmt_bind_param($stmt, "ssis", $name, $email, $number, $message);
+                        mysqli_stmt_execute($stmt);
+                        header("Location: thankyou.php");
+                    }
+            } 
+            else {
+                  echo 'ERROR: Could not prepare query: $sqlinsert. ' . mysqli_error($connect);
             }
+
+            mysqli_stmt_close($stmt);    
     }
 
 } //<-- end of main if statement
+
 mysqli_close($connect);
+
 
 //form is submittsed with POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -92,6 +102,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (mail($to, $subject, $contactMessage)){
           $contactName = $contactEmail = $contactNumber = $contactMessage = '';
       }
+      
+      $subject2 = "Copy of your form submission ";
+      $message2 = "Here is the copy of your message:\n\n" . "Name: " . $name. "\n\n" . "Phone: " . $number. "\n\n" . "Email used: " . $email. "\n\n" . "Message: \n\n" . $message;
+      $headers2 = "From: " ;
+      mail($email, $subject2, $message2, $headers2);
   }
 }
 
