@@ -105,8 +105,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
       $subject2 = "Copy of your form submission ";
       $message2 = "Here is the copy of your message:\n\n" . "Name: " . $name. "\n\n" . "Phone: " . $number. "\n\n" . "Email used: " . $email. "\n\n" . "Message: \n\n" . $message;
-      $headers2 = "From: " ;
+      $headers2 = "From: " .  $to ;
       mail($email, $subject2, $message2, $headers2);
+      $headers.= "MIME-version: 1.0\n";                             // to avoid getting into spam message
+      $headers.= "Content-type: text/html; charset= iso-8859-1\n";  // to avoid getting into spam message
   }
 }
 
