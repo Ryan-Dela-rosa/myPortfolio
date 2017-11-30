@@ -30,12 +30,8 @@ session_start();
                         mysqli_stmt_execute($stmt);
                         header("Location: thankyou.php");
                     }
-            } 
-            else {
-                  echo 'ERROR: Could not prepare query: $sqlinsert. ' . mysqli_error($connect);
-            }
-
-            mysqli_stmt_close($stmt);    
+                mysqli_stmt_close($stmt); 
+            }    
     }
 
 } //<-- end of main if statement
